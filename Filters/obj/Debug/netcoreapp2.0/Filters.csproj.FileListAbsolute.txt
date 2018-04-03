@@ -1,0 +1,11 @@
+C:\Users\Peter\source\repos\Filters\Filters\bin\Debug\netcoreapp2.0\Filters.deps.json
+C:\Users\Peter\source\repos\Filters\Filters\bin\Debug\netcoreapp2.0\Filters.runtimeconfig.json
+C:\Users\Peter\source\repos\Filters\Filters\bin\Debug\netcoreapp2.0\Filters.runtimeconfig.dev.json
+C:\Users\Peter\source\repos\Filters\Filters\bin\Debug\netcoreapp2.0\Filters.dll
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.csprojResolveAssemblyReference.cache
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.csproj.CoreCompileInputs.cache
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.AssemblyInfoInputs.cache
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.AssemblyInfo.cs
+C:\Users\Peter\source\repos\Filters\Filters\bin\Debug\netcoreapp2.0\Filters.pdb
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.dll
+C:\Users\Peter\source\repos\Filters\Filters\obj\Debug\netcoreapp2.0\Filters.pdb
