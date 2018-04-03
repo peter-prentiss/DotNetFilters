@@ -3,7 +3,7 @@ using Filters.Infrastructure;
 
 namespace Filters.Controllers
 {
-    [HttpsOnly]
+    [Profile]
     public class HomeController : Controller
     {
         [RequireHttps]
