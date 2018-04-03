@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Filters.Infrastructure;
 
 namespace Filters
 {
@@ -13,10 +9,17 @@ namespace Filters
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddScoped<IFilterDiagnostics, DefaultFilterDiagnostics>();
+            services.AddScoped<TimeFilter>();
+            services.AddScoped<ViewResultDiagnostics>();
+            services.AddScoped<DiagnosticsFilter>();
+            services.AddMvc().AddMvcOptions(options =>
+            {
+                options.Filters.AddService(typeof(ViewResultDiagnostics));
+                options.Filters.AddService(typeof(DiagnosticsFilter));
+            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStatusCodePages();
