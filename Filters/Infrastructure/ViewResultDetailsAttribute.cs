@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -8,7 +9,7 @@ namespace Filters.Infrastructure
 {
     public class ViewResultDetailsAttribute : ResultFilterAttribute
     {
-        public override void OnResultExecuting(ResultExecutingContext context)
+        public override async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>
             {
@@ -31,6 +32,8 @@ namespace Filters.Infrastructure
                     new ModelStateDictionary())
                 { Model = dict }
             };
+
+            await next();
         }
     }
 }

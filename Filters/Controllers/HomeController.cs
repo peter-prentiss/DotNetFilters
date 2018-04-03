@@ -3,6 +3,7 @@ using Filters.Infrastructure;
 
 namespace Filters.Controllers
 {
+    [Profile]
     [ViewResultDetails]
     public class HomeController : Controller
     {
