@@ -3,10 +3,9 @@ using Filters.Infrastructure;
 
 namespace Filters.Controllers
 {
-    [Profile]
+    [ViewResultDetails]
     public class HomeController : Controller
     {
-        [RequireHttps]
         public ViewResult Index() => View("Message",
             "This is the Index action on the Home controller");
     }
